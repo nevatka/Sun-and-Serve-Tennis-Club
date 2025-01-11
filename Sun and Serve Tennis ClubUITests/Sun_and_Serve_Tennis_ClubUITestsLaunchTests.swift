@@ -1,10 +1,3 @@
-//
-//  Sun_and_Serve_Tennis_ClubUITestsLaunchTests.swift
-//  Sun and Serve Tennis ClubUITests
-//
-//  Created by Ada on 11/11/2024.
-//
-
 import XCTest
 
 final class Sun_and_Serve_Tennis_ClubUITestsLaunchTests: XCTestCase {
