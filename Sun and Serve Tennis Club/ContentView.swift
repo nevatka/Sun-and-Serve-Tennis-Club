@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Sun and Serve Tennis Club
-//
-//  Created by Ada on 11/11/2024.
-//
-
 import SwiftUI
 
 struct ContentView: View {
