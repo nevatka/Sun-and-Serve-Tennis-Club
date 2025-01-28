@@ -50,7 +50,7 @@ struct MainView: View {
                     Label("Opening hours", systemImage: "clock")
                 }
             
-            ContentView()
+            LoginView()
                 .tabItem {
                     Label("Log In", systemImage: "person.crop.circle")
                 }
