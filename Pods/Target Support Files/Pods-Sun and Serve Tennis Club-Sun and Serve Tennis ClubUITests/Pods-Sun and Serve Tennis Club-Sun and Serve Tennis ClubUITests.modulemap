@@ -1,0 +1,6 @@
+framework module Pods_Sun_and_Serve_Tennis_Club_Sun_and_Serve_Tennis_ClubUITests {
+  umbrella header "Pods-Sun and Serve Tennis Club-Sun and Serve Tennis ClubUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

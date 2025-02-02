@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		44D4C1912D4F938E00FF3613 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44D4C1902D4F938E00FF3613 /* GoogleService-Info.plist */; };
+		5F7D21FC31DC4FF57AC3BE47 /* Pods_Sun_and_Serve_Tennis_Club_Sun_and_Serve_Tennis_ClubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8232408A56C16999819960 /* Pods_Sun_and_Serve_Tennis_Club_Sun_and_Serve_Tennis_ClubUITests.framework */; };
+		83275FE86D80CB3469626810 /* Pods_Sun_and_Serve_Tennis_Club.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F69FAEAB231EBFBA373B865 /* Pods_Sun_and_Serve_Tennis_Club.framework */; };
+		DCEB3E92FEEADF40E0D043DB /* Pods_Sun_and_Serve_Tennis_ClubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F9BB00759E67574FB2AE2C /* Pods_Sun_and_Serve_Tennis_ClubTests.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		4465C0AF2CE26D2D00D92BE3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,9 +31,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19A20D48FB74E318CCC33FB8 /* Pods-Sun and Serve Tennis Club.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sun and Serve Tennis Club.debug.xcconfig"; path = "Target Support Files/Pods-Sun and Serve Tennis Club/Pods-Sun and Serve Tennis Club.debug.xcconfig"; sourceTree = "<group>"; };
+		39322624B07ED42A5F1CF548 /* Pods-Sun and Serve Tennis Club.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sun and Serve Tennis Club.release.xcconfig"; path = "Target Support Files/Pods-Sun and Serve Tennis Club/Pods-Sun and Serve Tennis Club.release.xcconfig"; sourceTree = "<group>"; };
 		4465C09E2CE26D2C00D92BE3 /* Sun and Serve Tennis Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sun and Serve Tennis Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4465C0AE2CE26D2D00D92BE3 /* Sun and Serve Tennis ClubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sun and Serve Tennis ClubTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4465C0B82CE26D2D00D92BE3 /* Sun and Serve Tennis ClubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sun and Serve Tennis ClubUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		44D4C1902D4F938E00FF3613 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6F69FAEAB231EBFBA373B865 /* Pods_Sun_and_Serve_Tennis_Club.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sun_and_Serve_Tennis_Club.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3F9BB00759E67574FB2AE2C /* Pods_Sun_and_Serve_Tennis_ClubTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sun_and_Serve_Tennis_ClubTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4EB96199050A153A78C7CF1 /* Pods-Sun and Serve Tennis Club-Sun and Serve Tennis ClubUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sun and Serve Tennis Club-Sun and Serve Tennis ClubUITests.release.xcconfig"; path = "Target Support Files/Pods-Sun and Serve Tennis Club-Sun and Serve Tennis ClubUITests/Pods-Sun and Serve Tennis Club-Sun and Serve Tennis ClubUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E607711AA3D62AE7B5EF00C4 /* Pods-Sun and Serve Tennis Club-Sun and Serve Tennis ClubUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sun and Serve Tennis Club-Sun and Serve Tennis ClubUITests.debug.xcconfig"; path = "Target Support Files/Pods-Sun and Serve Tennis Club-Sun and Serve Tennis ClubUITests/Pods-Sun and Serve Tennis Club-Sun and Serve Tennis ClubUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EB5FB24EF72C05C2C2D6E82C /* Pods-Sun and Serve Tennis ClubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sun and Serve Tennis ClubTests.release.xcconfig"; path = "Target Support Files/Pods-Sun and Serve Tennis ClubTests/Pods-Sun and Serve Tennis ClubTests.release.xcconfig"; sourceTree = "<group>"; };
+		EF8232408A56C16999819960 /* Pods_Sun_and_Serve_Tennis_Club_Sun_and_Serve_Tennis_ClubUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sun_and_Serve_Tennis_Club_Sun_and_Serve_Tennis_ClubUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3440C0B9B5D3E293B6E49F6 /* Pods-Sun and Serve Tennis ClubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sun and Serve Tennis ClubTests.debug.xcconfig"; path = "Target Support Files/Pods-Sun and Serve Tennis ClubTests/Pods-Sun and Serve Tennis ClubTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83275FE86D80CB3469626810 /* Pods_Sun_and_Serve_Tennis_Club.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCEB3E92FEEADF40E0D043DB /* Pods_Sun_and_Serve_Tennis_ClubTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F7D21FC31DC4FF57AC3BE47 /* Pods_Sun_and_Serve_Tennis_Club_Sun_and_Serve_Tennis_ClubUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,10 +95,13 @@
 		4465C0952CE26D2C00D92BE3 = {
 			isa = PBXGroup;
 			children = (
+				44D4C1902D4F938E00FF3613 /* GoogleService-Info.plist */,
 				4465C0A02CE26D2C00D92BE3 /* Sun and Serve Tennis Club */,
 				4465C0B12CE26D2D00D92BE3 /* Sun and Serve Tennis ClubTests */,
 				4465C0BB2CE26D2D00D92BE3 /* Sun and Serve Tennis ClubUITests */,
 				4465C09F2CE26D2C00D92BE3 /* Products */,
+				5FDA557EFE90B62233BFEDD4 /* Pods */,
+				D8351F1D8E92FAD1D15C4C8E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +115,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		5FDA557EFE90B62233BFEDD4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				19A20D48FB74E318CCC33FB8 /* Pods-Sun and Serve Tennis Club.debug.xcconfig */,
+				39322624B07ED42A5F1CF548 /* Pods-Sun and Serve Tennis Club.release.xcconfig */,
+				E607711AA3D62AE7B5EF00C4 /* Pods-Sun and Serve Tennis Club-Sun and Serve Tennis ClubUITests.debug.xcconfig */,
+				B4EB96199050A153A78C7CF1 /* Pods-Sun and Serve Tennis Club-Sun and Serve Tennis ClubUITests.release.xcconfig */,
+				F3440C0B9B5D3E293B6E49F6 /* Pods-Sun and Serve Tennis ClubTests.debug.xcconfig */,
+				EB5FB24EF72C05C2C2D6E82C /* Pods-Sun and Serve Tennis ClubTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D8351F1D8E92FAD1D15C4C8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F69FAEAB231EBFBA373B865 /* Pods_Sun_and_Serve_Tennis_Club.framework */,
+				EF8232408A56C16999819960 /* Pods_Sun_and_Serve_Tennis_Club_Sun_and_Serve_Tennis_ClubUITests.framework */,
+				B3F9BB00759E67574FB2AE2C /* Pods_Sun_and_Serve_Tennis_ClubTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,9 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4465C0C22CE26D2D00D92BE3 /* Build configuration list for PBXNativeTarget "Sun and Serve Tennis Club" */;
 			buildPhases = (
+				4B549FD6E244ADDDC919E731 /* [CP] Check Pods Manifest.lock */,
 				4465C09A2CE26D2C00D92BE3 /* Sources */,
 				4465C09B2CE26D2C00D92BE3 /* Frameworks */,
 				4465C09C2CE26D2C00D92BE3 /* Resources */,
+				E3EC72E8CFBD16C919B9BFD6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -111,8 +159,6 @@
 				4465C0A02CE26D2C00D92BE3 /* Sun and Serve Tennis Club */,
 			);
 			name = "Sun and Serve Tennis Club";
-			packageProductDependencies = (
-			);
 			productName = "Sun and Serve Tennis Club";
 			productReference = 4465C09E2CE26D2C00D92BE3 /* Sun and Serve Tennis Club.app */;
 			productType = "com.apple.product-type.application";
@@ -121,6 +167,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4465C0C52CE26D2D00D92BE3 /* Build configuration list for PBXNativeTarget "Sun and Serve Tennis ClubTests" */;
 			buildPhases = (
+				D573C06529152CB83EB7216C /* [CP] Check Pods Manifest.lock */,
 				4465C0AA2CE26D2D00D92BE3 /* Sources */,
 				4465C0AB2CE26D2D00D92BE3 /* Frameworks */,
 				4465C0AC2CE26D2D00D92BE3 /* Resources */,
@@ -134,8 +181,6 @@
 				4465C0B12CE26D2D00D92BE3 /* Sun and Serve Tennis ClubTests */,
 			);
 			name = "Sun and Serve Tennis ClubTests";
-			packageProductDependencies = (
-			);
 			productName = "Sun and Serve Tennis ClubTests";
 			productReference = 4465C0AE2CE26D2D00D92BE3 /* Sun and Serve Tennis ClubTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -144,9 +189,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4465C0C82CE26D2D00D92BE3 /* Build configuration list for PBXNativeTarget "Sun and Serve Tennis ClubUITests" */;
 			buildPhases = (
+				A2A935885C9D5DE0013A14DD /* [CP] Check Pods Manifest.lock */,
 				4465C0B42CE26D2D00D92BE3 /* Sources */,
 				4465C0B52CE26D2D00D92BE3 /* Frameworks */,
 				4465C0B62CE26D2D00D92BE3 /* Resources */,
+				77E91E6438E9FDB31DB0AED5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -157,8 +204,6 @@
 				4465C0BB2CE26D2D00D92BE3 /* Sun and Serve Tennis ClubUITests */,
 			);
 			name = "Sun and Serve Tennis ClubUITests";
-			packageProductDependencies = (
-			);
 			productName = "Sun and Serve Tennis ClubUITests";
 			productReference = 4465C0B82CE26D2D00D92BE3 /* Sun and Serve Tennis ClubUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -212,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44D4C1912D4F938E00FF3613 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +276,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B549FD6E244ADDDC919E731 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sun and Serve Tennis Club-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77E91E6438E9FDB31DB0AED5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sun and Serve Tennis Club-Sun and Serve Tennis ClubUITests/Pods-Sun and Serve Tennis Club-Sun and Serve Tennis ClubUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sun and Serve Tennis Club-Sun and Serve Tennis ClubUITests/Pods-Sun and Serve Tennis Club-Sun and Serve Tennis ClubUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sun and Serve Tennis Club-Sun and Serve Tennis ClubUITests/Pods-Sun and Serve Tennis Club-Sun and Serve Tennis ClubUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2A935885C9D5DE0013A14DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sun and Serve Tennis Club-Sun and Serve Tennis ClubUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D573C06529152CB83EB7216C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sun and Serve Tennis ClubTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3EC72E8CFBD16C919B9BFD6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sun and Serve Tennis Club/Pods-Sun and Serve Tennis Club-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sun and Serve Tennis Club/Pods-Sun and Serve Tennis Club-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sun and Serve Tennis Club/Pods-Sun and Serve Tennis Club-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4465C09A2CE26D2C00D92BE3 /* Sources */ = {
@@ -306,7 +455,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -369,7 +518,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -390,6 +539,7 @@
 		};
 		4465C0C32CE26D2D00D92BE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19A20D48FB74E318CCC33FB8 /* Pods-Sun and Serve Tennis Club.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -420,6 +570,7 @@
 		};
 		4465C0C42CE26D2D00D92BE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39322624B07ED42A5F1CF548 /* Pods-Sun and Serve Tennis Club.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -450,6 +601,7 @@
 		};
 		4465C0C62CE26D2D00D92BE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3440C0B9B5D3E293B6E49F6 /* Pods-Sun and Serve Tennis ClubTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -469,6 +621,7 @@
 		};
 		4465C0C72CE26D2D00D92BE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB5FB24EF72C05C2C2D6E82C /* Pods-Sun and Serve Tennis ClubTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -488,6 +641,7 @@
 		};
 		4465C0C92CE26D2D00D92BE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E607711AA3D62AE7B5EF00C4 /* Pods-Sun and Serve Tennis Club-Sun and Serve Tennis ClubUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -505,6 +659,7 @@
 		};
 		4465C0CA2CE26D2D00D92BE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4EB96199050A153A78C7CF1 /* Pods-Sun and Serve Tennis Club-Sun and Serve Tennis ClubUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
