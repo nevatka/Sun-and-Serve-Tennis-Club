@@ -1,15 +1,22 @@
 import SwiftUI
 
-struct LoginView: View {
+struct RegisterView: View {
+    @State private var name = ""
+    @State private var lastName = ""
     @State private var email = ""
     @State private var password = ""
     
     var body: some View {
-        NavigationStack {
             VStack(spacing: -50) {
+                
                 ImageView(imageName: "logo")
                 
                 VStack {
+                    TextField("Name", text: $name)
+                        .loginFieldsStyle()
+                    
+                    TextField("Last Name", text: $lastName)
+                        .loginFieldsStyle()
                     
                     TextField("Email", text: $email)
                         .loginFieldsStyle()
@@ -22,7 +29,7 @@ struct LoginView: View {
                     Button(action: {
                         
                     }) {
-                        Text("LOG IN")
+                        Text("SIGN IN")
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity)
                             .padding()
@@ -31,29 +38,16 @@ struct LoginView: View {
                             .padding(.horizontal, 30)
                     }
                     .padding(.top, 10)
-                    
-                    Text ("Forgot password?")
-                        .font(.custom("PTSerif-Regular", size: 15))
-                        .foregroundStyle(Color.accentColor)
-                        .padding(.top, 10)
+
                 }
                 
                 Spacer()
-                
-                NavigationLink(destination: RegisterView()) {
-                    Text("Doesn't have an account? Sign Up!")
-                        .font(.custom("PTSerif-Regular", size: 18))
-                        .foregroundColor(Color.accentColor)
-                }
             }
-            .padding()
+            .padding([.leading, .trailing, .top])
+            .padding(.bottom, 200)
+            }
         }
-        
-    }
-}
-
 
 #Preview {
-    LoginView()
+    RegisterView()
 }
-

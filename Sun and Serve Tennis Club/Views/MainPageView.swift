@@ -13,7 +13,7 @@ struct MainPageView: View {
                         .foregroundStyle(Color.accentColor)
                     
                     NavigationLink(destination: ContentView()) { ImageView(imageName: "book") }
-                    NavigationLink(destination: ContentView()) { ImageView(imageName: "account") }
+                    NavigationLink(destination: RegisterView()) { ImageView(imageName: "account") }
                 }
             }
             .navigationTitle("Sun & Serve Tennis Club")
