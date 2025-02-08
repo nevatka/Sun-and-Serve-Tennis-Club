@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct MainPageView: View {
+    @State private var showSheet: Bool = false
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -12,7 +13,16 @@ struct MainPageView: View {
                         .font(.custom("PTSerif-Regular", size: 20))
                         .foregroundStyle(Color.accentColor)
                     
-                    NavigationLink(destination: ContentView()) { ImageView(imageName: "book") }
+                    Button {
+                        showSheet = true
+                    } label: {
+                        ImageView(imageName: "reservation")
+
+                    }
+                    .sheet(isPresented: $showSheet) {
+                        ReservationView(isPresented: $showSheet)
+                            .presentationDetents([.large, .medium, .fraction(0.5)])
+                    }
                     NavigationLink(destination: RegisterView()) { ImageView(imageName: "account") }
                 }
             }
@@ -20,4 +30,9 @@ struct MainPageView: View {
             .navigationBarTitleDisplayMode(.inline)
         }
     }
+}
+
+
+#Preview {
+    MainPageView()
 }

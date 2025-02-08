@@ -76,6 +76,10 @@ struct OpeningHoursView: View {
         let timeComponents = calendar.dateComponents([.hour, .minute], from: parsedTime)
         components.hour = timeComponents.hour
         components.minute = timeComponents.minute
+        
+        print("Day " , components.day)
+        
+        print("Get time: ", calendar.date(from: components))
 
         return calendar.date(from: components) // Returns a Date object with today's date
     }
