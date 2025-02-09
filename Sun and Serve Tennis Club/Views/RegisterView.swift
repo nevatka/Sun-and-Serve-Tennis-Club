@@ -1,52 +1,62 @@
 import SwiftUI
 
 struct RegisterView: View {
+    
+    @StateObject private var viewModel = RegisterViewViewModel()
     @State private var name = ""
     @State private var lastName = ""
-    @State private var email = ""
-    @State private var password = ""
+    @State private var backToMainPage: Bool = false
     
     var body: some View {
-            VStack(spacing: -50) {
+        VStack(spacing: -50) {
+            
+            ImageView(imageName: "logo")
+            
+            VStack {
+                TextField("Name", text: $name)
+                    .loginFieldsStyle()
                 
-                ImageView(imageName: "logo")
+                TextField("Last Name", text: $lastName)
+                    .loginFieldsStyle()
                 
-                VStack {
-                    TextField("Name", text: $name)
-                        .loginFieldsStyle()
-                    
-                    TextField("Last Name", text: $lastName)
-                        .loginFieldsStyle()
-                    
-                    TextField("Email", text: $email)
-                        .loginFieldsStyle()
-                        .autocapitalization(.none)
-                        .keyboardType(.emailAddress)
-                    
-                    SecureField("Password", text: $password)
-                        .loginFieldsStyle()
-                    
-                    Button(action: {
-                        
-                    }) {
-                        Text("SIGN IN")
-                            .foregroundColor(.white)
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(Color.accentColor)
-                            .cornerRadius(25)
-                            .padding(.horizontal, 30)
+                TextField("Email", text: $viewModel.email)
+                    .loginFieldsStyle()
+                    .autocapitalization(.none)
+                    .keyboardType(.emailAddress)
+                
+                SecureField("Password", text: $viewModel.password)
+                    .loginFieldsStyle()
+                
+                Button(action: {
+                    Task {
+                        try await viewModel.signIn()
                     }
-                    .padding(.top, 10)
-
+                    backToMainPage = true
+                }) {
+                    Text("SIGN IN")
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.accentColor)
+                        .cornerRadius(25)
+                        .padding(.horizontal, 30)
                 }
+                .padding(.top, 10)
                 
-                Spacer()
             }
-            .padding([.leading, .trailing, .top])
-            .padding(.bottom, 200)
-            }
+            
+            Spacer()
         }
+        .padding([.leading, .trailing, .top])
+        .padding(.bottom, 200)
+        .fullScreenCover(isPresented: $backToMainPage) {
+            MainView()
+            
+        }
+    }
+            
+        
+}
 
 #Preview {
     RegisterView()
