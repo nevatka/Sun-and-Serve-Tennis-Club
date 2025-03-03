@@ -40,6 +40,8 @@ struct RegisterView: View {
                         .background(Color.accentColor)
                         .cornerRadius(25)
                         .padding(.horizontal, 30)
+                        .disabled(viewModel.password.isEmpty || viewModel.email.isEmpty)
+                    
                 }
                 .padding(.top, 10)
                 

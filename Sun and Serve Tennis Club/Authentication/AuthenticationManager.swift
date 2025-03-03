@@ -30,4 +30,13 @@ final class AuthenticationManager {
         return AuthDataResultModel(user: user)
     }
     
+    func logIn(email: String, password: String) async throws -> AuthDataResultModel {
+        do {
+            let authDataResult = try await Auth.auth().signIn(withEmail: email, password: password)
+            return AuthDataResultModel(user: authDataResult.user)
+        } catch let error as NSError {
+            throw error
+        }
+    }
+    
 }
