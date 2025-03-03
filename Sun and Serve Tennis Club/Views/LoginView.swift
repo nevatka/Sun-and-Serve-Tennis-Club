@@ -1,9 +1,8 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var email = ""
-    @State private var password = ""
-    
+    @StateObject private var viewModel = LoginViewViewModel()
+
     var body: some View {
         NavigationStack {
             VStack(spacing: -50) {
@@ -11,16 +10,41 @@ struct LoginView: View {
                 
                 VStack {
                     
-                    TextField("Email", text: $email)
+                    TextField("Email", text: $viewModel.email)
                         .loginFieldsStyle()
                         .autocapitalization(.none)
                         .keyboardType(.emailAddress)
+                            
+                        .onChange(of: viewModel.email) {
+                            viewModel.wrongEmail = !FormValidation().validateEmail(viewModel.email)
+                        }
+                    if viewModel.wrongEmail {
+                        Text("Wrong Email")
+                            .font(.custom("PTSerif-Regular", size: 10))
+                            .foregroundStyle(Color.red)
+                    }
                     
-                    SecureField("Password", text: $password)
+
+                    
+                    SecureField("Password", text: $viewModel.password)
                         .loginFieldsStyle()
+                        .onChange(of: viewModel.password) {
+                            viewModel.wrongPassword = !FormValidation().validatePassword(viewModel.password)
+                        }
+                    Text("Password must be between 8 and 16 characters long")
+                        .font(.custom("PTSerif-Regular", size: 10))
+                        .foregroundStyle(viewModel.wrongPassword ? Color.red : Color.accentColor)
                     
+                    if viewModel.authError {
+                        Text(viewModel.authErrorMessage)
+                            .font(.custom("PTSerif-Regular", size: 10))
+                            .foregroundStyle(Color.red)
+                    }
+
                     Button(action: {
-                        
+                        Task {
+                            try await viewModel.logIn()
+                        }
                     }) {
                         Text("LOG IN")
                             .foregroundColor(.white)
@@ -29,6 +53,7 @@ struct LoginView: View {
                             .background(Color.accentColor)
                             .cornerRadius(25)
                             .padding(.horizontal, 30)
+                            .disabled(viewModel.password.isEmpty || viewModel.email.isEmpty || viewModel.wrongEmail || viewModel.wrongPassword)
                     }
                     .padding(.top, 10)
                     
@@ -47,6 +72,9 @@ struct LoginView: View {
                 }
             }
             .padding()
+            .fullScreenCover(isPresented: $viewModel.success) {
+                MainView()
+            }
         }
         
     }
