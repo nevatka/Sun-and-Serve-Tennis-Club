@@ -27,6 +27,7 @@ final class AuthenticationManager {
         guard let user = Auth.auth().currentUser else {
             throw URLError(.badServerResponse)
         }
+        print("USER: ", user)
         return AuthDataResultModel(user: user)
     }
     
@@ -37,6 +38,10 @@ final class AuthenticationManager {
         } catch let error as NSError {
             throw error
         }
+    }
+    
+    func logOut() throws {
+        try Auth.auth().signOut()
     }
     
 }

@@ -15,6 +15,7 @@ struct MainView: View {
         UINavigationBar.appearance().scrollEdgeAppearance = appear
      }
     
+    @StateObject var viewModel = LoginViewViewModel()
     
     var body: some View {
         TabView {
@@ -28,11 +29,25 @@ struct MainView: View {
                 .tabItem {
                     Label("Opening hours", systemImage: "clock")
                 }
-
-            LoginPageView()  // Login Page content
-                .tabItem {
-                    Label("Log In", systemImage: "person.crop.circle")
-                }
+            
+            if viewModel.isLoggedIn {
+                ProfileView()
+                    .tabItem {
+                        Label("My Profile", systemImage: "person.crop.circle")
+                    }
+            } else {
+                
+                LoginPageView()  // Login Page content
+                    .tabItem {
+                        Label("Log In", systemImage: "person.crop.circle")
+                    }
+            }
+            
+            
+        }
+        .environmentObject(viewModel)
+        .onAppear {
+            viewModel.checkLoginStatus()
         }
     }
 }

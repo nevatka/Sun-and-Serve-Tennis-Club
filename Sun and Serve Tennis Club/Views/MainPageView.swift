@@ -2,6 +2,9 @@ import SwiftUI
 
 struct MainPageView: View {
     @State private var showSheet: Bool = false
+//    @State private var isLoggedIn: Bool = false
+    @EnvironmentObject var viewModel: LoginViewViewModel
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -13,26 +16,33 @@ struct MainPageView: View {
                         .font(.custom("PTSerif-Regular", size: 20))
                         .foregroundStyle(Color.accentColor)
                     
-                    Button {
-                        showSheet = true
-                    } label: {
-                        ImageView(imageName: "reservation")
-
+                    if viewModel.isLoggedIn {
+                        
+                        // Show Reservation Button if Logged In
+                        Button {
+                            showSheet = true
+                        } label: {
+                            ImageView(imageName: "reservation")
+                        }
+                        .sheet(isPresented: $showSheet) {
+                            ReservationView(isPresented: $showSheet)
+                                .presentationDetents([.large, .medium, .fraction(0.5)])
+                        }
+                    } else {
+                        // Show Account Navigation if NOT Logged In
+                        NavigationLink(destination: RegisterView()) {
+                            ImageView(imageName: "account")
+                        }
                     }
-                    .sheet(isPresented: $showSheet) {
-                        ReservationView(isPresented: $showSheet)
-                            .presentationDetents([.large, .medium, .fraction(0.5)])
-                    }
-                    NavigationLink(destination: RegisterView()) { ImageView(imageName: "account") }
+                
                 }
             }
             .navigationTitle("Sun & Serve Tennis Club")
             .navigationBarTitleDisplayMode(.inline)
         }
+//        .onAppear {
+//            viewModel.checkLoginStatus()
+//        }
     }
-}
-
-
-#Preview {
-    MainPageView()
+    
 }

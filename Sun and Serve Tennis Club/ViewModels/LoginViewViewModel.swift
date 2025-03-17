@@ -9,6 +9,7 @@ final class LoginViewViewModel: ObservableObject {
     @Published var authError: Bool = false
     @Published var authErrorMessage: String = ""
     @Published var success: Bool = false
+    @Published var isLoggedIn: Bool = false
     
     private var authManager: AuthenticationManager
     private var formValidation: FormValidation
@@ -37,13 +38,31 @@ final class LoginViewViewModel: ObservableObject {
             return
         }
         do {
-            let response = try await authManager.logIn(email: email, password: password)
+            _ = try await authManager.logIn(email: email, password: password)
             authError = false
             authErrorMessage = ""
             success = true
         } catch {
             authError = true
             authErrorMessage = error.localizedDescription
+        }
+    }
+    
+    func logOut() throws {
+        do {
+            _ = try authManager.logOut()
+            isLoggedIn = false
+        } catch {
+            
+        }
+    }
+    
+    func checkLoginStatus() {
+        do {
+            _ = try authManager.getUser()
+            isLoggedIn = true
+        } catch {
+            isLoggedIn = false
         }
     }
 }
