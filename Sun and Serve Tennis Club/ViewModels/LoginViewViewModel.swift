@@ -24,7 +24,6 @@ final class LoginViewViewModel: ObservableObject {
     
     func logIn() async throws {
         guard !email.isEmpty, !password.isEmpty else {
-            print("No email or password found")
             return
         }
         let isEmailValid = formValidation.validateEmail(email)

@@ -19,7 +19,7 @@ struct LoginView: View {
                             viewModel.wrongEmail = !FormValidation().validateEmail(viewModel.email)
                         }
                     if viewModel.wrongEmail {
-                        Text("Wrong Email")
+                        Text("Wrong email format")
                             .font(.custom("PTSerif-Regular", size: 10))
                             .foregroundStyle(Color.red)
                     }
