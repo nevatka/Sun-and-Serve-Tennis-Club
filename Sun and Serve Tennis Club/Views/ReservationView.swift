@@ -27,7 +27,9 @@ struct ReservationView: View {
                 }
                 
                 .alert("Do you confirm this reservation?", isPresented: $showingAlert) {
-                    Button("Yes, I Confirm") {}
+                    Button("Yes, I Confirm") {
+                        
+                    }
                     Button("Cancel", role: .cancel) {}
                     
                 }
