@@ -11,13 +11,16 @@ final class RegisterViewViewModel: ObservableObject {
     
     private var authManager: AuthenticationManager
     private var formValidation: FormValidation
+    private var membersCollector: MembersCollector
 
     init(
         authManager: AuthenticationManager = .shared,
-        formValidation: FormValidation = FormValidation()
+        formValidation: FormValidation = FormValidation(),
+        membersCollector: MembersCollector = MembersCollector()
     ) {
         self.authManager = authManager
         self.formValidation = formValidation
+        self.membersCollector = membersCollector
     }
     
     func signIn() async throws{
@@ -36,5 +39,6 @@ final class RegisterViewViewModel: ObservableObject {
         }
         
         _ = try await authManager.createUser(email: email, password: password)
+        _ = try await membersCollector.addMember(name: name, surname: lastName, email: email)
     }
 }

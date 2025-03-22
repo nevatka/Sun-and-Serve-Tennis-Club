@@ -40,9 +40,6 @@ struct MainPageView: View {
             .navigationTitle("Sun & Serve Tennis Club")
             .navigationBarTitleDisplayMode(.inline)
         }
-//        .onAppear {
-//            viewModel.checkLoginStatus()
-//        }
     }
     
 }

@@ -1,5 +1,8 @@
 import SwiftUI
 import Firebase
+import FirebaseCore
+import FirebaseFirestore
+
 
 @main
 struct Sun_and_Serve_Tennis_ClubApp: App {
@@ -8,7 +11,6 @@ struct Sun_and_Serve_Tennis_ClubApp: App {
     
     init() {
         FirebaseApp.configure()
-        print("FirebaseApp configured()")
     }
     
     var body: some Scene {
