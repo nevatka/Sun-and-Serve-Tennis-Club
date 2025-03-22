@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440B333B2D8F5B46004987C7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 440B333A2D8F5B40004987C7 /* README.md */; };
 		44D4C1912D4F938E00FF3613 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44D4C1902D4F938E00FF3613 /* GoogleService-Info.plist */; };
 		5F7D21FC31DC4FF57AC3BE47 /* Pods_Sun_and_Serve_Tennis_Club_Sun_and_Serve_Tennis_ClubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8232408A56C16999819960 /* Pods_Sun_and_Serve_Tennis_Club_Sun_and_Serve_Tennis_ClubUITests.framework */; };
 		83275FE86D80CB3469626810 /* Pods_Sun_and_Serve_Tennis_Club.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F69FAEAB231EBFBA373B865 /* Pods_Sun_and_Serve_Tennis_Club.framework */; };
@@ -33,6 +34,9 @@
 /* Begin PBXFileReference section */
 		19A20D48FB74E318CCC33FB8 /* Pods-Sun and Serve Tennis Club.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sun and Serve Tennis Club.debug.xcconfig"; path = "Target Support Files/Pods-Sun and Serve Tennis Club/Pods-Sun and Serve Tennis Club.debug.xcconfig"; sourceTree = "<group>"; };
 		39322624B07ED42A5F1CF548 /* Pods-Sun and Serve Tennis Club.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sun and Serve Tennis Club.release.xcconfig"; path = "Target Support Files/Pods-Sun and Serve Tennis Club/Pods-Sun and Serve Tennis Club.release.xcconfig"; sourceTree = "<group>"; };
+		440B33382D8F5B27004987C7 /* PM1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PM1.png; sourceTree = "<group>"; };
+		440B33392D8F5B27004987C7 /* PM2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PM2.png; sourceTree = "<group>"; };
+		440B333A2D8F5B40004987C7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4465C09E2CE26D2C00D92BE3 /* Sun and Serve Tennis Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sun and Serve Tennis Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4465C0AE2CE26D2D00D92BE3 /* Sun and Serve Tennis ClubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sun and Serve Tennis ClubTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4465C0B82CE26D2D00D92BE3 /* Sun and Serve Tennis ClubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sun and Serve Tennis ClubUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,9 +96,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		440B33372D8F5AE5004987C7 /* ProductMockup */ = {
+			isa = PBXGroup;
+			children = (
+				440B33382D8F5B27004987C7 /* PM1.png */,
+				440B33392D8F5B27004987C7 /* PM2.png */,
+			);
+			path = ProductMockup;
+			sourceTree = "<group>";
+		};
 		4465C0952CE26D2C00D92BE3 = {
 			isa = PBXGroup;
 			children = (
+				440B333A2D8F5B40004987C7 /* README.md */,
+				440B33372D8F5AE5004987C7 /* ProductMockup */,
 				44D4C1902D4F938E00FF3613 /* GoogleService-Info.plist */,
 				4465C0A02CE26D2C00D92BE3 /* Sun and Serve Tennis Club */,
 				4465C0B12CE26D2D00D92BE3 /* Sun and Serve Tennis ClubTests */,
@@ -257,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				440B333B2D8F5B46004987C7 /* README.md in Resources */,
 				44D4C1912D4F938E00FF3613 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
