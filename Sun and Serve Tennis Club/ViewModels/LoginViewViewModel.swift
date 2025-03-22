@@ -10,16 +10,20 @@ final class LoginViewViewModel: ObservableObject {
     @Published var authErrorMessage: String = ""
     @Published var success: Bool = false
     @Published var isLoggedIn: Bool = false
+    @Published var name: String = ""
     
     private var authManager: AuthenticationManager
     private var formValidation: FormValidation
+    private var membersCollector: MembersCollector
     
     init(
         authManager: AuthenticationManager = .shared,
-        formValidation: FormValidation = FormValidation()
+        formValidation: FormValidation = FormValidation(),
+        membersCollector: MembersCollector = MembersCollector()
     ) {
         self.authManager = authManager
         self.formValidation = formValidation
+        self.membersCollector = membersCollector
     }
     
     func logIn() async throws {
@@ -56,10 +60,13 @@ final class LoginViewViewModel: ObservableObject {
         }
     }
     
-    func checkLoginStatus() {
+    func checkLoginStatus() async {
         do {
-            _ = try authManager.getUser()
+            let user = try authManager.getUser()
             isLoggedIn = true
+            email = user.email ?? ""
+            name =  await membersCollector.getMemberName(email: email)
+            
         } catch {
             isLoggedIn = false
         }

@@ -3,8 +3,6 @@ import SwiftUI
 struct RegisterView: View {
     
     @StateObject private var viewModel = RegisterViewViewModel()
-    @State private var name = ""
-    @State private var lastName = ""
     @State private var backToMainPage: Bool = false
     
     var body: some View {
@@ -13,10 +11,10 @@ struct RegisterView: View {
             ImageView(imageName: "logo")
             
             VStack {
-                TextField("Name", text: $name)
+                TextField("Name", text: $viewModel.name)
                     .loginFieldsStyle()
                 
-                TextField("Last Name", text: $lastName)
+                TextField("Last Name", text: $viewModel.lastName)
                     .loginFieldsStyle()
                 
                 TextField("Email", text: $viewModel.email)

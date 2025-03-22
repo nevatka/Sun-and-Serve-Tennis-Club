@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct CalendarDaysView: View {
-    @State private var selectedDate = Date() // Track the selected date
+    @ObservedObject var viewModel: ReservationViewViewModel
     
     private let calendar = Calendar.current
     private let daysRange: [Date] = {
@@ -11,7 +11,8 @@ struct CalendarDaysView: View {
     }()
     
     private func isSelected(_ date: Date) -> Bool {
-        calendar.isDate(date, inSameDayAs: selectedDate)
+        guard let selectedDate = viewModel.selectedDate else { return false }
+        return calendar.isDate(date, inSameDayAs: selectedDate)
     }
     
     private func dayOfWeek(from date: Date) -> String {
@@ -31,6 +32,7 @@ struct CalendarDaysView: View {
             Label("Select a reservation date", systemImage: "calendar")
                 .font(.custom("PTSerif-Regular", size: 20))
                 .foregroundStyle(.gray)
+            
             // Horizontally swipeable calendar
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 16) {
@@ -48,7 +50,7 @@ struct CalendarDaysView: View {
                         .background(isSelected(date) ? Color.accentColor : Color.clear)
                         .cornerRadius(12)
                         .onTapGesture {
-                            selectedDate = date
+                            viewModel.selectedDate = date 
                         }
                     }
                 }
@@ -56,16 +58,4 @@ struct CalendarDaysView: View {
             }
         }
     }
-}
-
-// Date formatter for display
-private let dateFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .full
-    return formatter
-}()
-    
-    
-#Preview {
-    CalendarDaysView()
 }

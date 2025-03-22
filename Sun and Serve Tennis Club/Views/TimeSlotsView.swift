@@ -1,7 +1,8 @@
 import SwiftUI
 
 struct TimeSlotsView: View {
-    @State private var selectedTime: String? = nil // Track selected time
+    
+    @ObservedObject var viewModel: ReservationViewViewModel
     
     let timeSlots = [
         "10:00-11:00",
@@ -23,11 +24,11 @@ struct TimeSlotsView: View {
                             .font(.custom("PTSerif-Regular", size: 20))
                             .padding(.vertical, 10)
                             .padding(.horizontal, 20)
-                            .background(selectedTime == timeSlot ? Color.accentColor : .white)
+                            .background(viewModel.selectedTimeSlot == timeSlot ? Color.accentColor : .white)
                             .cornerRadius(12)
-                            .foregroundColor(selectedTime == timeSlot ? .white : .primary)
+                            .foregroundColor(viewModel.selectedTimeSlot == timeSlot ? .white : .primary)
                             .onTapGesture {
-                                selectedTime = timeSlot
+                                viewModel.selectedTimeSlot = timeSlot
                             }
                     }
                 }
@@ -35,8 +36,4 @@ struct TimeSlotsView: View {
             }
         }
     }
-}
-
-#Preview {
-    TimeSlotsView()
 }

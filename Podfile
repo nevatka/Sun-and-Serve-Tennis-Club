@@ -5,6 +5,7 @@ target 'Sun and Serve Tennis Club' do
 
   # ✅ Only Firebase Auth (Minimal setup)
   pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
   target 'Sun and Serve Tennis ClubTests' do
     inherit! :search_paths

@@ -1,14 +1,16 @@
 import SwiftUI
 
 struct ReservationView: View {
+    
     @Binding var isPresented: Bool
-    @State private var showingAlert: Bool = false
+    @EnvironmentObject var loginViewModel: LoginViewViewModel
+    @StateObject private var viewModel = ReservationViewViewModel()
+
     var body: some View {
         VStack (spacing: 40) {
             
-            CalendarDaysView()
-        
-            TimeSlotsView()
+            CalendarDaysView(viewModel: viewModel)
+             TimeSlotsView(viewModel: viewModel)
             
             HStack(spacing: 70){
                 
@@ -19,22 +21,21 @@ struct ReservationView: View {
                         .buttonCancelStyle()
                 }
                 
-                Button {
-                    showingAlert = true
-                } label: {
+                Button(action: {
+                    Task {
+                        await viewModel.addReservation(for: loginViewModel.email)
+                    }
+                }) {
                     Text("Confirm")
                         .buttonConfirmStyle()
                 }
                 
-                .alert("Do you confirm this reservation?", isPresented: $showingAlert) {
-                    Button("Yes, I Confirm") {
-                        
-                    }
-                    Button("Cancel", role: .cancel) {}
-                    
+                .alert("You can't add more than 3 reservations. ", isPresented: $viewModel.tooManyReservations) {
+                    Button("OK", role: .cancel) {}
                 }
             }
         }
+        .environmentObject(loginViewModel)
         
     }
 }

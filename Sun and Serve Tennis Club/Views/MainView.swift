@@ -47,7 +47,9 @@ struct MainView: View {
         }
         .environmentObject(viewModel)
         .onAppear {
-            viewModel.checkLoginStatus()
+            Task {
+                await viewModel.checkLoginStatus()
+            }
         }
     }
 }
