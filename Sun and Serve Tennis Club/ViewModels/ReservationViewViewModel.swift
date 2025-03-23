@@ -21,7 +21,7 @@ final class ReservationViewViewModel: ObservableObject {
         let reservations = await getReservations(for: email)
         print(reservations.count)
         
-        guard reservations.count < 4 else {
+        guard reservations.count < 3 else {
             print("Too many reservations for this user.")
             tooManyReservations = true
             return
