@@ -33,6 +33,9 @@ struct ReservationView: View {
                 .alert("You can't add more than 3 reservations. ", isPresented: $viewModel.tooManyReservations) {
                     Button("OK", role: .cancel) {}
                 }
+                .alert("Reservation confirmed ", isPresented: $viewModel.reservationConfirmed) {
+                    Button("OK", role: .cancel) {}
+                }
             }
         }
         .environmentObject(loginViewModel)

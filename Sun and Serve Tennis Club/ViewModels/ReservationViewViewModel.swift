@@ -7,6 +7,7 @@ final class ReservationViewViewModel: ObservableObject {
     @Published var selectedDate: Date? // Selected date
     @Published var selectedTimeSlot: String? // Selected time slot
     @Published var tooManyReservations: Bool = false
+    @Published var reservationConfirmed: Bool = false
     
     private var membersCollector: MembersCollector
 
@@ -40,6 +41,7 @@ final class ReservationViewViewModel: ObservableObject {
         let timestamp = convertTimeSlotToTimestamp(date: selectedDate, timeSlot: selectedTimeSlot)
         
         await membersCollector.addReservation(for: email, time: timestamp)
+        reservationConfirmed = true
     }
     
     
